@@ -1,0 +1,13 @@
+Individual values for MW, M33, and M31 ordered in Line 2,3,4 respectively
+[-0.652  2.385 -1.734] kpc
+[-95.708 -70.382   2.372] km / s
+[-476.222  491.435 -412.413] kpc
+[ 43.463 100.453 137.079] km / s
+[-377.59   611.516 -284.831] kpc
+[ 68.842 -72.49   56.603] km / s
+The difference of position (line 9) and velocity(line 10) for MW and M31
+[ 376.938 -609.131  283.097] kpc
+[-164.55     2.108  -54.231] km / s
+The difference of position (line 12) and velocity (line 13) for M31 and M33
+[ 98.632 120.081 127.582] kpc
+[  25.379 -172.943  -80.476] km / s
