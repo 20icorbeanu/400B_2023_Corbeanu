@@ -1,0 +1,230 @@
+\documentclass[modern]{aastex61}
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+\iflatexml
+ \documentclass{aastex61} % we need this for {longrotatetable}
+ \def\arcsec{''} % katex needs help
+\fi
+\newcommand{\latex}{LaTeX}
+\newcommand{\aastex}{AASTeX}
+\newcommand{\noindent}{}
+\newcommand{\arcsec}{$^{\prime\prime}$}
+\newcommand{\arcmin}{$^\prime$}
+
+\shorttitle{The Evolution of M33 Glacitical Rotational Curve From Simulation of Collision in M33, MW, M31 Merger.}
+\shortauthors{Ioan Matei Corbeanu}
+
+\begin{document}
+
+\title{The Evolution of M33 Glacitical Rotational Curve From Simulation of Collision in M33, MW, M31 Merger.}
+
+
+\author{Ioan Matei Corbeanu}
+\affil{Affiliation not available}
+
+
+
+\selectlanguage{english}
+\begin{abstract}
+The topic explored in this paper shows how Rotation Curves evolves after a simulation galaxy merger of M33 with the system MW and M31. This topic allows us to see how rotation curves looked initially and how they grew and developed into what we currently understand and see as rotation curves. The answer to this simulation will push us a step closer to understanding why each galaxy has a unique rotation curve despite many similarities of those galaxies. This question is important to us because understanding how rotation curves differ from galaxy to galaxy allows us to understand differences in galaxies and better ways to categorize them or understand them. The first result found showed that as time evolves the peak velocities tend to decrease and start to fluctuate more and more. This implies that upon finishing a merger, galaxies tend to be stable and have concentrated stars, due to their high velocities. It also shows that as time progresses, stars tend to exchange energies within the outer zones of the disk. The second result showed that the radius of where the peak velocity of the rotation curve was located starts off near the center of the galaxy and then progresses into the outer boundaries. However, it never reaches the utmost boundary and it also never gets close to the center again. Just like the first result, it also adds more fluctuations as time moves on. This shows that stars after a merger are mostly located near the center of the galaxy and tend to exchange most of the energy after a significant time pass. It also shows that stars will start constantly converting kinetic energy to potential in a repeated process at later times.
+%
+\end{abstract}%
+
+
+
+
+\keywords{Rotation Curve --- Local Group --- Galaxy Mergers --- Spiral galaxies --- Dark matter Halo}
+
+
+
+
+\section{Introduction} \label{sec:intro} 
+ 
+A Galaxy is a collection of stars distributed at different ranges. We can picture this as a star solar system, except with many orbits and many more suns. In a solar system, planets move at different speeds, directly related to the distance they are from the center of mass (COM) of the system, typically where the sun is located. In galaxies, the center of mass is located at a Super Massive Black Hole (SMBH) and unlike the solar system, their Rotation Curve (1) does not directly relate to the distance as in a solar system. A Rotation Curve is the mathematical plot on how velocity of stars changes as you move further away from the COM. However, how does a rotation curve change as a galaxy evolves, and what can we infer from the results produced? To explain this, we will be studying one galaxy in our Local Group, the Triangulum Galaxy, commonly known as M33. The local group is a group of galaxies that includes around 20 galaxies, one that the Milky Way resides in and our object of study, M33.
+
+To understand why observing the change in the Rotation Curve as time passes matters, we must understand what galaxies are and how they evolve through time. To start, we need to define what a galaxy is. A galaxy is a bunch of gravitationally bound stars that have properties that cannot be defined and explained by Newton's laws of gravity or combination of baryons. More commonly, galaxies are defined by components that each galaxy must have including, Central SMBH, Dark Matter Halo, Disk/Spheroid that surrounds the main galaxy, and a collection of gas, stars, and dust in a Disk/Spheroid/Elliptical distribution. A Dark Matter Halo is a halo ring around the outer most layer of a galaxy that is compromised of only dark matter. Galaxies tend to evolve and change as time passes, mainly due to galaxy mergers. Galaxy mergers happen when 2+ galaxies collide with each other, releasing gravitational waves, creation of spiral arms, and potentially much more. Our topic, Rotation Curve through time, closely relates to this topic as we get to see how the velocity distribution of a newly formed galaxy changes over time. This gives us insight to how fast stars begin to equalize and gives us the rotation curve we are familiar with, the different velocity distribution stages, and the degree of speed change that occurs for each star. We also get to see how a rotation curve initially looks right after a collision, giving us insight to not only where the main collision occurred, but also how the stars spread out and move inside the galaxy.
+
+While this topic is relatively new, it is not completely unheard of. A study titled, "A merger-Driven Scenario for Cosmological Disk Galaxy Formation" \citep{article} was done to showcase to explore how merger in Cosmological Disk Galaxies can give leads to galaxy formation. Robert et al. specifically addressed the scenario of rotation curve using the following graph.\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/Stellar-rotation-curve-of-merger-remnants-for-models-with-differing-ISM/Stellar-rotation-curve-of-merger-remnants-for-models-with-differing-ISM}
+\caption{{(Robertson et al., 2008) These are Rotation curves of the merger done
+before the merger occurs and after the merger. As well as how stars in
+each respective galaxy reacted to the merger. The open triangles~are the
+stars before the merger, open circles are after merger and all stars in
+the system are filled circles. Each panel~represents different gas
+pressurizations. The key takeaway is that each after the merger, the
+velocity in the rotation curve spiked by a significant amount. ~
+{\label{502600}}%
+}}
+\end{center}
+\end{figure}
+
+
+
+
+Here he demonstrates that the rotation curve tends to spike largely at the center of the galaxy and stabilizes and decreases slowly as you move away from the center. Another topic of the same type was conducted in 2000 by Yoshiaki Sofue (https://arxiv.org/pdf/astro-ph/0010594.pdf). Sofue explored how rotation curves differ from different spiral galaxies. A spiral galaxy is a type of galaxy that has the main property of having arms that go around the center of the galaxy in the shape of a spiral. Sofue found out that most spiral galaxies have rapid rotation velocities and are dependent on the mass of the SMBH at the center of the galaxy. He also mentioned that among 30 of the spirals in the Ursa Major Cluster that was studied, only 10 of them had a proper shape, or a shape that we are familiar with when talking about rotation curves. 
+
+During Yoshuaki Sofue's paper on Rotation curve of different spiral galaxies \citep{Sofue_2001} some questions he set out to answer where not answered, such as Velocity Rotation as high redshift galaxies, and why rotation curves differ from galaxy to galaxy, even though some basic properties are the same, and how early rotation curves may latter curves. A similar project by Martinez-Medina in 2014 was done \citep{Martinez_Medina_2014} to show evolution of rotation curves for low surface brightness galaxies. They concluded that galaxies with complex outer disks needed more complex models than the one assigned due to complex star formation and interactions between inner disk and outer disk. As time progresses they suspect more complex models will be created that can support more complex interactions which would allow us to see how rotation curves can change for specific galaxies more accurately. 
+
+
+\section{This Project}
+
+In this paper, we will study the evolution of Rotation Curves in the Triangulum (M33) Galaxy. The evolution time starts right after the galaxy finishes merging with the MW-M31 system. We plan to visit and explore how the rotation curve changes by exploring the peak velocity's evolution, the radius at the peak velocity's evolution, and finally and other unique properties that are brought up by observing M33 rotation curve evolution.
+
+While there are many questions in this field, this project aims to address the question of how early rotation curves in galaxy formation can have a significant effect on rotation curves that we currently observe. Since our aim is to see how M33's rotation curve changes right as evolution begins, we can solve this question for M33. However, it won't be possible to draw a definitive answer to all galaxies, since as Sofue mentioned \citep{Sofue_2001} that all galaxies' rotation curves are distinct from each other.
+
+Since we are able to conduct research on a specific galaxy, by having this trail run for multiple galaxies, and comparing the results, we can potentially answer the deeper questions such as why different galaxies have different rotation curve evolution, or how early rotation evolution might impact current rotation curves. 
+
+
+
+\section {Methadology}
+
+To get the data for this project, we start off by using the simulations described by The M31 Velocity Vector III. simulation by \citep{}\cite{van_der_Marel_2012}. These are simulations used to show future orbital evolution and mergers of the MW/M31/M33 local group system. The simulation was created using an N-body simulation. This means that each star in the galaxy is treated like a particle, thus the data is a complex system of multiple particles. For our purpose, we get to utilize the M33 data post merger, which gives us the data to insight into what the evolution will be right after a merger. The simulation consists of 801 snapshots, a set of data that details a point in time, with a ton of particle data involving 3 types of particles. Dark Matter, Disk Stars, Bulge Stars. For our case, we are looking at the stellar rotation curve, thus the Dark Matter profile does not help us. However, M33 is a pure disk galaxy meaning that it has no bulge, thus we are only taking data for Disk Stars of M33
+
+The Rotation Curve is a graph set for one period of time, or when time is fixed, thus we can not directly compare the graphs to each other, instead we need to apply certain aspects of the graph. As shown below, we have 3 snapshots of 760,761,762.\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/template/template}
+\caption{{Three sets of graphs to represent the idea behind solving the problem
+previously mentioned. Shows three images of snapshots 760,761,762 and
+lines indicating their respective peak radius and peak velocity
+{\label{435594}}%
+}}
+\end{center}
+\end{figure}
+
+With these three graphs, there are 3 ways to compare them. Firstly is to directly stack each image on top of each other and see how the graph changes. This can be done via GIFs and we do this by setting 801 images (since there are 801 snapshots) into an array and asking a function to flip through each array and print the image on the screen. By doing this we get a gif that has all 801 images and shows how they change. The second and third way to observe change is by looking at minimums and maximums. Since Rotation Curves tend to linearize or decrease after hitting a maximum, it is important to observe each maximum and compare it in every snapshot. We can use the max function built in to python to get the maximum value on the graph to get our result. On top of finding out what the maximum velocity could be, we can also find out where the maximum velocity is located. We can do this by finding out the index at where $v_{max}$ is located in the velocity array, then locating where the respective radius is in another array. 
+
+To compute the graphs needed, we are first going to need to get the Rotation curve. To do this, we will use the equation $V^2=GM_{enc}(r)/r$ where $G$ is Newton's gravitational constant, $M_{enc}$ is the enclosed mass within a certain distance $r$ and $r$ is the distance you want to find the velocity at. To get the enclosed mass we use the equation $M_{enc}=$ $\Sigma_{i=0}^{M_{enc}}$ $M_i$ where $M_0$ is the mass at the center of the galaxy and $r$ is the distance you want to find velocity at.
+
+To figure out how the graphs change through time, we outlined 3 specific ways to do so, however, we will be producing 4 graphs. The first graph will be Vmaxvs snapshot to indicate how the max velocity changes as time progresses. The second graph will be $r_{vmax}$ vs snapshot to indicate how the location of the max velocity changes throughout time. The third and fourth graph will be linked together. They will both be a collection of 801 rotation curve graphs for each individual snapshot and will be put together in a gif animation that shows how they change over the different snapshots. However, one of the graphs will have a locked y axis scale while the other will not. This is because the one that has a locked scale can observe how the values change and how the graph either decreases in size or increases in size, while the unlocked scale will only focus on the shape of the rotation curve and see how it evolves as snapshots progress. 
+
+My hypothesis for this simulation is that initially we will see fast max velocities with high fluctuations at earlier snapshots than later snapshots. I also think that the radius will be steady initially, take a large dip during a middle snapshot, then stabilize again at the later snapshots. I think that we will see high velocity at the early snapshots because upon collision there will be a lot of stars being next to each other, at close distances, which would result in fast stars. The kinetic energy of the galaxy should also be higher, thus the energy needs to be compensated which results in higher velocities. Because there is so much interaction occurring at the earlier stages of the galaxy, we can infer that there will be a lot of fluctuation that happens in velocities. The radius early on will also be close to the center because that is where most of the interactions are happening, resulting at the most speed there. As snapshots increase, I believe that the system will slowly dissipate energy, thus getting to a stable consistent radius and max velocity. 
+
+
+\section {results}
+
+\subsection{First Result}\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/MaxVelocity-VS-Snapshot/MaxVelocity-VS-Snapshot}
+\caption{{Max Velocity measured in km/s versus the snapshot number (instance of
+time). Shows that the graph is stable at the~ beginning at a constant
+120km/s without any large fluctuation. Around 400 snapshot there is a
+sudden plunge. At 600 snapshot there are large fluctuations at around
+50km/s
+{\label{228264}}%
+}}
+\end{center}
+\end{figure}
+
+The figure above shows how the Peak Velocity Changes throughout snapshots. We can see that for the majority of the early snapshots, the peak velocity is at 120 km/s with very minimal fluctuations, however, as we progress into the later snapshots, we observe a sharp transition period around the 400th snapshot that spans 100 snapshots into a low velocity high fluctuations area. In regards to galaxy evolution, we see that right after collision we see most of the stars having really high velocity, probably due to the interactions between stars at close proximity. We see later on that the stars begin to "relax" and attempt to find their location by having high fluctuations that seem to get smaller and smaller.
+
+
+\subsection{Second Result}\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/MaxVelocityRadius-VS-Snapshot/MaxVelocityRadius-VS-Snapshot}
+\caption{{Graph showing Radius of where max velocity was found at (in km) versus
+the snapshot number (instance of time). Graph shows that at the
+beginning there was constant radius of around 0, then at snapshot 400
+there is a sudden increase. Fluctuations start at 600 snapshot at a
+amplitude of 10-15km
+{\label{432315}}%
+}}
+\end{center}
+\end{figure}
+
+The figure above is a direct reflection of the previous figure (MaxVelovity VS Snapshot), only looking at where the radius of the max velocity is located. We observe that for the first half of the snapshots have close to no fluctuation of radius, while being low and close to 0. Around the 450th snapshot, we see it transition into a phase of high fluctuation, large radius, for the next 300 snapshots without any hint of stabilization. In regards to galaxy merger, we see that the stars seem to be having high velocity next to the center of mass, or where the SMBH is located, and further away we notice that the fluctuations start occurring, which implies that the stars are attempting to stabilize as indicated by the decreasing fluctuation amplitude.
+
+\subsection{third result}\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.70\columnwidth]{figures/RircularVelocity-Shape-Change-Through-Time-GIF/RircularVelocity-Shape-Change-Through-Time-GIF}
+\caption{{A GIF that shows all 801 snapshots of the Rotation curve. Runs at 1
+snapshot per 30ms. Shows that at the beginning the rotation curve is
+abrupt and peaks early, while exponentially decaying at further
+distances. The later the snapshot the more normalized the shape
+becomes.~
+{\label{649469}}%
+}}
+\end{center}
+\end{figure}
+
+The following graph shows how the rotation curve changes as snapshot increases while keeping the scaling constant. By observing this graphs, we can see that the rotation curve for the majority of the snapshots spikes at an early radius in velocity then exponentially decays as you increase radius. At around snapshot 400 we start to see the peak slowly move to the right until a certain radius, and then it starts fluctuating at different radius while also fluctuating its velocity. In context of galaxy merger, we see that at the beginning the stars are moving at really fast speeds near the center, but over time the fastest speeds become those on the outside and fluctuate back in, however, they never reach the radius where the velocity was as 120km/s
+
+\section{Discussion}
+The first result obtained showcased that at the beginning of the galaxy's life, the Max velocity remained at a constant 120 km/s for around 360 snapshots, until it plummeted rapidly until the 500th snapshot. It then began to fluctuate in large amplitudes over the remaining snapshots. My hypothesis stated that The velocity would initially be high then decrease over snapshots, while also decreasing fluctuations. While It agreed that the velocity decreased over time, it did not agree with how the fluctuations would behave. This result has significant meaning to galaxy evolution since we can understand now that initially the stars had very high velocities and over time they lost it. Since velocity is synonymous with Kinetic energy, we can say that as long as conversation was applied, the galaxy system must have started with high Kinetic energy at the beginning of evolution, but ended up converting much of that energy to potential or other means.
+
+Some uncertainties in the analysis can come from how the max velocity was computed. Instead of using a formula and replugging the values obtained back in, due to time complexity, I figured it would be easier to have a large array of radius values, collect the highest velocity that the circular velocity function would produce, and take that as the max velocity. This would cause some error, but not by a significant amount. 
+
+The second result obtained showed how the radius of where the velocity max peak changed over time. It was constantly close to the center of the galaxy for 400 snapshots until it spiked to a radius of 7km and then started fluctuating by a value of 10-15km. My hypothesis stated that the radius would start close to the center then slowly and linearly spread out towards the edge, or what is commonly known as the radial velocity curve. However, the results show a massive fluctuation at later snapshots, which completely disagree with my hypothesis. This result is quite significant to our understanding of galaxy evolution since it shows that as time progresses, different distances have the fastest velocity, with a steady positive trend. This shows that due to exterior reasons that must be further tested, the stars at different distances are getting affected rapidly. This further indicates an open question that was proposed in the field that pondered how outer disks can potentially affect stellar rotation curves.
+
+The results only include disk type stars since M33 does not have any bulge type stars, and we are not considering the effects of dark matter. A potential error could come up that dark matter was not considered and that the effects could have affected it. Besides that, the same errors mentioned in the first result could have played an error. While this error won't be massive enough to explain the fluctuations, it might affect the amplitude of the fluctuations. 
+
+The last result that was produced is a GIF that shows how the rotation curve changes as snapshots increase or as time moves forward. From the gif we can see that the rotation curve tends to keep the shape constant while moving. This is valuable to understand since the curve does not change, it implies that our understanding of rotation curves since rotation curves keep their shape, mostly. In regards to my hypothesis, this data both further showcased result 1 and result 2 in a more picture form. In regards to our understanding, this data shows that while rotation curves tend to differentiate from each other as time progresses, they mostly keep their shape after the initial switch around the 400 snapshot time. 
+
+There could not be many potential errors in this code since it was mostly simple computations done via code worked in class with little editing other than adding them to an array and making the gif.
+
+
+\section{conclusion}
+Overall, we attempted to show how Rotation Curves evolve over time by having M33 merge with the MW and M31 system and showed that the rotation curves evolve in a much more complicated manner then we understand. We are able to understand that galaxies have unique rotation curves evolution since M33 has the fluctuations that it has compared to other remains, and more testing is needed to see by how different M33 compares to the rest of the galaxies.
+Finding that the velocity peak starts off linear for a long period of time at a high value only to deplete and start fluctuating was a surprise, disproving my hypothesis. It potentially showed the distribution of energy in the system over time, as well as how they might end up stabilizing into a rotation curve we are familiar with. 
+
+Another key discovery that synchronized itself with the previous result was showing how the radius of the peak velocity changes through time. The result showed that it started close to the center of the galaxy, to only spread out to the edges and start fluctuating in the same manner as the first result. The result, not only disproved my hypothesis, it also brought insight into where the energy transfer was happening. 
+
+To further explore this topic, a deeper simulation must be run. Ideally one that incorporates more snapshots since the current knowledge of the fluctuations is hard to draw any conclusions, potentially if we can see how the fluctuations change later in time might give more insight into how everything might be able to stabilize. 
+
+
+\section{Acknoweldgements}
+
+1. Astropy(Astropy Collaoration et al. 2013; Price-Whelan et al. 2018 doi: 10.3847/15383881/aabc4f)
+
+2. matplotlib Hunter (2007),DOI: 10.1109/MCSE.2011.37
+
+3. numpy van der Walt et al. (2011),DOI: 10.1109/MCSE.2011.37
+
+4. ipython Perez \& Granger (2007),DOI:10.1109/MCSE.2007.53
+
+5. Almar Klein et al. (2018),DOI:10.5281/zenodo.1488562
+
+\selectlanguage{english}
+\FloatBarrier
+\nocite{*}
+
+\bibliographystyle{aasjournal}
+\bibliography{bibliography/converted_to_latex.bib%
+}
+
+\end{document}
+
